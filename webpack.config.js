@@ -4,7 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OUTPUT_PATH = path.resolve('./dist');
 
 const config = {
-  entry: './src/main.js',
+  entry: {
+    main: './src/main.js',
+    style: './src/style.css',
+  },
   output: {
     path: OUTPUT_PATH,
     filename: '[name].js'

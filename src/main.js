@@ -1,6 +1,3 @@
-require('./style.css');
-
-
 
 // class Person {
 //   static peopleCount = 0;
