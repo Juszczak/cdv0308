@@ -13,5 +13,6 @@ npx babel --out-file dist/main.js src
 
 npm run compile
 
+npm install --save-dev html-webpack-plugin
 
 ```
