@@ -1,0 +1,29 @@
+{
+  "name": "cdv0308",
+  "version": "1.0.0",
+  "description": "Educational Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juszczak/cdv0308.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Juszczak/cdv0308/issues"
+  },
+  "homepage": "https://github.com/Juszczak/cdv0308#readme"
+}
