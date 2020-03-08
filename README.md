@@ -21,4 +21,13 @@ serve dist
 
 npm install --save-dev webpack-dev-server
 
+npx webpack-dev-server
+
+npm run dev
+
+
+npm install --save-dev css-loader
+
+npm install --save-dev style-loader
+
 ```

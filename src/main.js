@@ -1,54 +1,58 @@
-class Person {
-  static peopleCount = 0;
+require('./style.css');
 
-  constructor(name, lastname, age) {
-    this.id = ++Person.peopleCount;
-    this.name = name;
-    this.lastname = lastname;
-    this.age = age;
-  }
 
-  get fullName() {
-    return this.name + ' ' + this.lastname;
-  }
 
-  set fullName(value) {
-    const values = value.split(' ');
-    this.name = values[0];
-    this.lastname = values[1];
-  }
+// class Person {
+//   static peopleCount = 0;
 
-  getFullNameWithTitle(title) {
-    return `${title} ${this.name} ${this.lastname}`;
-  }
-}
+//   constructor(name, lastname, age) {
+//     this.id = ++Person.peopleCount;
+//     this.name = name;
+//     this.lastname = lastname;
+//     this.age = age;
+//   }
 
-class Student extends Person {
-  constructor(name, lastname, age, index) {
-    super(name, lastname, age);
-    this.index = index;
-  }
+//   get fullName() {
+//     return this.name + ' ' + this.lastname;
+//   }
 
-  getFullNameWithTitle(title) {
-    return `Student ${super.getFullNameWithTitle(title)}`;
-  }
-}
+//   set fullName(value) {
+//     const values = value.split(' ');
+//     this.name = values[0];
+//     this.lastname = values[1];
+//   }
 
-async function main() {
-  const delay = 0;
-  const page = 1;
-  const url = `https://reqres.in/api/colors?page=${page}${delay > 0 ? `&delay=${delay}` : ''}`;
-  const response = await fetch(url);
-  const body = await response.json();
-  const {data: colors, ...metadata} = body;
-  const [first, second, third, ...rest] = colors;
+//   getFullNameWithTitle(title) {
+//     return `${title} ${this.name} ${this.lastname}`;
+//   }
+// }
 
-  const template = `
-  first:  ${first.color}
-  second: ${second.color}
-  third:  ${third.color}
-  `;
-  console.log(template);
-}
+// class Student extends Person {
+//   constructor(name, lastname, age, index) {
+//     super(name, lastname, age);
+//     this.index = index;
+//   }
 
-main();
+//   getFullNameWithTitle(title) {
+//     return `Student ${super.getFullNameWithTitle(title)}`;
+//   }
+// }
+
+// async function main() {
+//   const delay = 0;
+//   const page = 1;
+//   const url = `https://reqres.in/api/colors?page=${page}${delay > 0 ? `&delay=${delay}` : ''}`;
+//   const response = await fetch(url);
+//   const body = await response.json();
+//   const {data: colors, ...metadata} = body;
+//   const [first, second, third, ...rest] = colors;
+
+//   const template = `
+//   first:  ${first.color}
+//   second: ${second.color}
+//   third:  ${third.color}
+//   `;
+//   console.log(template);
+// }
+
+// main();
