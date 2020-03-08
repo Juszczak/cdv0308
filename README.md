@@ -15,4 +15,10 @@ npm run compile
 
 npm install --save-dev html-webpack-plugin
 
+npm run build
+
+serve dist
+
+npm install --save-dev webpack-dev-server
+
 ```

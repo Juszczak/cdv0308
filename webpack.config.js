@@ -19,7 +19,10 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
-  ]
+  ],
+  devServer: {
+    port: 3000
+  }
 };
 
 module.exports = config;
