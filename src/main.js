@@ -1,7 +1,5 @@
 class Person {
-  static peopleCount = 0;
   constructor(name, lastname, age) {
-    this.id = ++Person.peopleCount;
     this.name = name;
     this.lastname = lastname;
     this.age = age;

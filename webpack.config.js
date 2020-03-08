@@ -15,7 +15,10 @@ const config = {
   module: {
     rules: [{
       test: /\.js$/,
-      use: 'babel-loader'
+      use: [
+        'babel-loader',
+        'eslint-loader'
+      ]
     }, {
       test: /\.css$/,
       use: [

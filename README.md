@@ -30,4 +30,13 @@ npm install --save-dev css-loader
 
 npm install --save-dev style-loader
 
+npm install --save-dev sass sass-loader
+
+
+npm install --save-dev prettier
+
+
+
+npm install eslint --save-dev
+
 ```
