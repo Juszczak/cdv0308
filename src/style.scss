@@ -1,0 +1,18 @@
+
+$bgcolor: #f0f;
+$txtcolor: #00f;
+
+body {
+  background: $bgcolor;
+}
+
+#app {
+  h1 {
+    color: $txtcolor;
+  }
+
+  p {
+    color: $txtcolor;
+  }
+}
+

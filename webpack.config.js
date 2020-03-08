@@ -6,7 +6,7 @@ const OUTPUT_PATH = path.resolve('./dist');
 const config = {
   entry: {
     main: './src/main.js',
-    style: './src/style.css',
+    style: './src/style.scss',
   },
   output: {
     path: OUTPUT_PATH,
@@ -21,6 +21,13 @@ const config = {
       use: [
         'style-loader',
         'css-loader'
+      ],
+    }, {
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        'sass-loader'
       ],
     }]
   },
