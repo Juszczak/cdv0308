@@ -4,7 +4,8 @@
   "description": "Educational Project",
   "main": "index.js",
   "scripts": {
-    "compile": "babel --out-file dist/main.js src"
+    "compile": "babel --out-file dist/main.js src",
+    "build": "webpack --mode=development"
   },
   "keywords": [],
   "author": "",
