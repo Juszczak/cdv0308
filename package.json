@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel --out-file dist/main.js src",
-    "build": "webpack --mode=development",
+    "build": "webpack --mode=production",
     "dev": "webpack-dev-server",
-    "format": "prettier --write src/main.js"
+    "format": "prettier --write src/main.js",
+    "lint": "eslint src/*.js",
+    "fix": "eslint --fix src/*.js"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +35,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "prettier": "^1.19.1",
     "sass": "^1.26.2",
     "sass-loader": "^8.0.2",

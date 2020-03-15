@@ -1,32 +1,5 @@
-class Person {
-  constructor(name, lastname, age) {
-    this.name = name;
-    this.lastname = lastname;
-    this.age = age;
-  }
-  get fullName() {
-    return this.name + ' ' + this.lastname;
-  }
-  set fullName(value) {
-    const values = value.split(' ');
-    this.name = values[0];
-    this.lastname = values[1];
-  }
-  getFullNameWithTitle(title) {
-    return `${title} ${this.name} ${this.lastname}`;
-  }
-}
-
-class Student extends Person {
-  constructor(name, lastname, age, index) {
-    super(name, lastname, age);
-    this.index = index;
-  }
-
-  getFullNameWithTitle(title) {
-    return `Student ${super.getFullNameWithTitle(title)}`;
-  }
-}
+import Person from './person';
+import Student from './student';
 
 async function main() {
   const delay = 0;
@@ -34,8 +7,11 @@ async function main() {
   const url = `https://reqres.in/api/colors?page=${page}${delay > 0 ? `&delay=${delay}` : ''}`;
   const response = await fetch(url);
   const body = await response.json();
-  const {data: colors, ...metadata} = body;
+  const { data: colors, ...metadata } = body;
   const [first, second, third, ...rest] = colors;
+
+  console.log(metadata);
+  console.log(rest);
 
   const template = `
   first:  ${first.color}
@@ -43,6 +19,10 @@ async function main() {
   third:  ${third.color}
   `;
   console.log(template);
+
+  const person = new Person();
+  const student = new Student();
+  console.log(person, student);
 }
 
 main();
